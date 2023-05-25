@@ -23,7 +23,6 @@ def read_csv():
 def write_csv(dict_id_value):
 
     with open("new.csv", "w") as csvfile:
-        #csvwrite = csv.writer(csvfile)
 
         dict_keys = dict_id_value.keys()
         dict_vals = dict_id_value.values()
@@ -31,8 +30,6 @@ def write_csv(dict_id_value):
         list_id_vals = list(zip(dict_keys, dict_vals))
 
         for pair in list_id_vals:
-            #pair = [element for element in pair]
-            #csvwrite.writerow(pair)
             csvfile.write(pair[0] + ", " + pair[1] + ", \n")
 
 
